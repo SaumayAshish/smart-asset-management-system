@@ -1,0 +1,20 @@
+@EndUserText.label : 'Asset Master Table'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table yasset_hdr {
+
+  key client      : abap.clnt not null;
+  key asset_id    : abap.char(10) not null;
+  asset_name      : abap.char(10) not null;
+  asset_type      : abap.char(30);
+  location        : abap.char(50);
+  purchase_date   : abap.dats;
+  status          : abap.char(20);
+  created_by      : abp_creation_user;
+  created_at      : abp_creation_tstmpl;
+  last_changed_by : abp_locinst_lastchange_user;
+  last_changed_at : abp_locinst_lastchange_tstmpl;
+
+}
